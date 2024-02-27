@@ -145,7 +145,12 @@
             const userRef = firebase.database().ref('users/' + userId);
             const snapshot = await userRef.once('value');
             const banBool = snapshot.val().banned;
-            if (banBool === 0) {
+            if (user.email == "sohamwani1812@gmail.com") {
+                document.getElementById('content').style.display = "block!important";
+                document.getElementById('nostart').style.display = "none!important";
+                document.getElementById('khatam').style.display = "none!important";
+                document.getElementById('banned').style.display = "none!important";
+            } else if (banBool === 0) {
                 if (currentDate.getTime() <= targetDate.getTime()) {
                     document.getElementById('content').style.display = "none";
                     document.getElementById('nostart').style.display = "block";
@@ -176,12 +181,6 @@
             } else {
                 disp();
                 showQuizContent(user);
-            }
-            if (user.email == "sohamwani1812@gmail.com") {
-                document.getElementById('content').style.display = "block!important";
-                document.getElementById('nostart').style.display = "none!important";
-                document.getElementById('khatam').style.display = "none!important";
-                document.getElementById('banned').style.display = "none!important";
             }
         });
 
