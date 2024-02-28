@@ -204,6 +204,7 @@
 
                             if (questionData) {
                                 document.getElementById('questionText').innerHTML = questionData.text.replace(/\\n/g, '<br>');
+                                document.getElementById('submitButton').appendChild(document.createComment(questionData.comment));
 
                                 if (questionData.image) {
                                     document.getElementById('imageDisplay').src = questionData.image;
