@@ -166,7 +166,7 @@
       <div id="logo">
         <img src="https://i.ibb.co/Zmqqt73/IMG-20240125-223643.jpg" alt="Logo">
       </div>
-      <div id="name">Cipher Saga</div>
+      <div id="name">Cipher Saga - <i>Freshers</i></div>
     </div>
     <div id="navbar-buttons">
       <button onclick="lb()"><i class="fa-solid fa-medal"></i></button>
@@ -200,8 +200,7 @@
     <details>
       <summary><i class="fa-solid fa-angles-down"></i> &nbsp;&nbsp;&nbsp; About The Event</summary>
       <p>
-        Cipher Saga is a cryptic hunt event being held during EPITOME'24, the annual tech fest of Gati
-        Shakti Vishwavidyalaya, Vadodara.
+       Cipher Saga is an online cryptic hunt event hosted during EPITOME, the annual techno-management fest of Gati Shakti Vishwavidyalaya. Participants tackle a series of challenging levels, deciphering clues and solving riddles to progress. This tests their wit, collaboration, and problem-solving skills, which will leave everyone thrilled and eager for more.
       </p>
     </details>
 
@@ -215,37 +214,11 @@
     </details>
 
     <details>
-      <summary><i class="fa-solid fa-angles-down"></i> &nbsp;&nbsp;&nbsp; How Will Winners Be Decided?</summary>
-      <p>
-        The person to solve most levels by the end of the competition wins. In case of a tie, winners are judged based
-        on the time. Early to solve wins.
-      </p>
-    </details>
-
-    <details>
-      <summary><i class="fa-solid fa-angles-down"></i> &nbsp;&nbsp;&nbsp; Important Links</summary>
-      <ul>
-        <li>Discord Server: <a href="https://discord.gg/EmJbUmGJtz">Join Now</a>
-        </li>
-        <li>Registration: <a href="https://forms.gle/8CWW89bgJHCarw3G9">Register</a>
-        </li>
-      </ul>
-    </details>
-
-    <details>
       <summary><i class="fa-solid fa-angles-down"></i> &nbsp;&nbsp;&nbsp; Rules</summary>
       <ul>
-        <li>Make sure you have registered on the platform. Make sure only to use your registered student email; all
-          other accounts will be marked as non-compete & you will not be allowed to score any points.</li>
-        <li>All hints & lead confirmations will be done via offical Discord server only; link will be
-          available above.</li>
-        <li>Asking other players for hints is an offense and can lead to disqualification if found.</li>
-        <li>Sharing answers or hints is strictly prohibited among users via any medium. Only organizers hold this right.
-          If found will lead to direct disqualification.</li>
-        <li>To report misconduct by any player, please DM the event coordinators.</li>
+        <li>Make sure you have registered on the platform to GET A TASTE OF CIPHER SAGA.</li>
         <li>Reverse engineering the platform means direct ban from the competition. Bugs if found should be reported and
           not exploited. Exploiting a bug also leads to disqualification.</li>
-        <li><b>Decision by organizers is final and should not be questioned.</b></li>
         <li><i>By playing the game, you adhere to agree to all the rules above. Now say anything and we will let you
             in.</i></li>
       </ul>
@@ -258,16 +231,9 @@
           normalize your inputs anyways! Answer may contain digits though!</li>
         <li>File passwords are all lower case without any special characters. We do not normalize this. So be wary while
           you enter file passwords. Passwords may contain digits though!</li>
-        <li>Stay aware for in platform hints or Discord hints. They could take you far in the game.</li>
+        <li>Stay aware for in platform hints. They could take you far in the game.</li>
         <li>Every clue in the question is important. If it wasn't important, it wouldn't be there.</li>
         <li>Beware of the spelling you enter, we do not autocorrect.</li>
-        <li>You can always clear your doubts on the Discord server. Be sure not to discuss answers or question about
-          answers
-          in any way.
-        </li>
-        <li>And if it was not obvious, team play, answer sharing, hint sharing and collaborating with other competitors
-          in general is not allowed and any such evidence can lead to disqualification. We have anti-cheats installed in
-          our code that can easily catch cheaters and ban them directly.</li>
       </ul>
     </details>
 
@@ -334,16 +300,16 @@
         Domain, TechnoCrats GSV</a></p>
   </footer>
   <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyA1kW57JODAX9F1uWuYOp-o9LtWgdp3Biw",
-            authDomain: "ciphersaga-gsv.firebaseapp.com",
-            databaseURL: "https://ciphersaga-gsv-default-rtdb.firebaseio.com",
-            projectId: "ciphersaga-gsv",
-            storageBucket: "ciphersaga-gsv.appspot.com",
-            messagingSenderId: "1028866915285",
-            appId: "1:1028866915285:web:38fa18229daf6f8ee29b5c",
-            measurementId: "G-K5MTVTEW0J"
-        };
+          const firebaseConfig = {
+    apiKey: "AIzaSyDhCvHuJoiNca1Wa3oda5DWNhk724gDGKQ",
+    authDomain: "ciphersaga-freshers.firebaseapp.com",
+    databaseURL: "https://ciphersaga-freshers-default-rtdb.firebaseio.com",
+    projectId: "ciphersaga-freshers",
+    storageBucket: "ciphersaga-freshers.firebasestorage.app",
+    messagingSenderId: "982507217891",
+    appId: "1:982507217891:web:4e346bbef8d9d216b4f6d6",
+    measurementId: "G-017H3KHXSJ"
+  };
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
     const database = firebase.database();
@@ -407,7 +373,6 @@
 
     function handleSignIn(user) {
       const email = user.email;
-      if (email.endsWith('gsv.ac.in') || ['sohamwani1812@gmail.com'].includes(email)) {
         const usersRef = database.ref('/users/' + user.uid);
         usersRef.transaction(function (currentData) {
           if (!currentData) {
@@ -432,11 +397,8 @@
           .catch(error => {
             console.error("Error creating /users/uid node:", error);
           });
-      } else {
-        auth.signOut();
-        alert('Only GSV domains are allowed');
-      }
-    }
+      } 
+  
 
     function handleSignOut() {
       document.getElementById('intro').style.display = 'block';
