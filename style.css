@@ -56,7 +56,7 @@ body {
 }
 
 #navbar-buttons button {
-    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    background: radial-gradient(ellipse farthest-corner at right bottom, #191970 0%, #1E3A8A 15%, #0F172A 40%, #020617 70%, transparent 90%  ), radial-gradient(ellipse farthest-corner at left top, #1E40AF 0%,     #3B82F6 15%,    #1E3A8A 40%,    #111827 70%, #020617 100% );
     color: #FFF;
     padding: 10px 15px;
     border: none;
@@ -66,7 +66,7 @@ body {
 }
 
 #navbar-buttons button:hover {
-    background: #8A6E2F;
+    background: #4f2f8a;
 }
 
 footer {
@@ -151,7 +151,7 @@ th {
 .credits-container .box-credits-container .box {
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     border-radius: 5px;
-    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+   background: radial-gradient(ellipse farthest-corner at right bottom, #191970 0%, #1E3A8A 15%, #0F172A 40%, #020617 70%, transparent 90%  ), radial-gradient(ellipse farthest-corner at left top, #1E40AF 0%,     #3B82F6 15%,    #1E3A8A 40%,    #111827 70%, #020617 100% );
     text-align: center;
     padding: 30px 20px;
 }
@@ -159,11 +159,11 @@ th {
 .credits-container .box-credits-container .box img {
     height: 200px;
     border-radius: 100%;
-    border: 10px solid #966919;
+    border: 10px solid #150b6b;
 }
 
 .credits-container .box-credits-container h3 {
-    color: black;
+    color: rgb(254, 250, 250);
     font-family: 40px;
     font-weight: 20px;
     padding: 10px 0;
@@ -173,6 +173,11 @@ th {
     box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
     transform: scale(1.03);
 }
+
+#intro h2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  /* futuristic */
+  font-size: 4rem;
+  font-weight: 700;}
 
 @media(max-width:768px) {
     .credits-container {
