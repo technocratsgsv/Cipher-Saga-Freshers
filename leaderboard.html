@@ -38,7 +38,7 @@
             </tr>
             <tr>
                 <td><i class="fa-solid fa-infinity"></i></td>
-                <td>Soham Wani</td>
+                <td>ORGANIZERS</td>
                 <td><i class="fa-solid fa-infinity"></i></td>
             </tr>
         </table>
@@ -62,6 +62,9 @@
         var usersRef = firebase.database().ref('users');
 
         usersRef.once('value').then(function (snapshot) {
+            const table = document.querySelector('table');
+            table.querySelectorAll("tr:not(:first-child):not(:nth-child(2))").forEach(row => row.remove());
+            if (!snapshot.exists()) return;
             var users = Object.entries(snapshot.val());
             users.sort(function (a, b) {
                 if (b[1].points !== a[1].points) {
