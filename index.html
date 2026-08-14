@@ -125,27 +125,16 @@
 
 
     <script>
-         // const firebaseConfig = {
-         // apiKey: "AIzaSyDJp6UiSRY3bRJ02N_-2TQOC4L4CELb7k4",
-         // authDomain: "cipher-saga-2.firebaseapp.com",
-         // databaseURL: "https://cryptonx-freshers-default-rtdb.asia-southeast1.firebasedatabase.app/",
-         // projectId: "cipher-saga-2",
-         // storageBucket: "cipher-saga-2.firebasestorage.app",
-         // messagingSenderId: "1003412882011",
-         // appId: "1:1003412882011:web:9a9c27aadc7467b539757e",
-         // measurementId: "G-CCGX7RPK39"};
-
-        const firebaseConfig = {
-        apiKey: "AIzaSyC4FukOF-Zb_6nkpSu4vAswdrRDb-Quu_Q",
-        authDomain: "cryptonx-freshers.firebaseapp.com",
-        databaseURL: "https://cryptonx-freshers-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "cryptonx-freshers",
-        storageBucket: "cryptonx-freshers.firebasestorage.app",
-        messagingSenderId: "117091897727",
-        appId: "1:117091897727:web:98c8745c8d5fae81288a4a",
-        measurementId: "G-QF8TJPM171"
-        };
-
+         const firebaseConfig = {
+         apiKey: "AIzaSyDhCvHuJoiNca1Wa3oda5DWNhk724gDGKQ",
+         authDomain: "ciphersaga-freshers.firebaseapp.com",
+         databaseURL: "https://ciphersaga-freshers-default-rtdb.firebaseio.com",
+         projectId: "ciphersaga-freshers",
+         storageBucket: "ciphersaga-freshers.firebasestorage.app",
+         messagingSenderId: "982507217891",
+         appId: "1:982507217891:web:4e346bbef8d9d216b4f6d6",
+         measurementId: "G-017H3KHXSJ"
+  };
         firebase.initializeApp(firebaseConfig);
         const auth = firebase.auth();
         const database = firebase.database();
@@ -159,8 +148,7 @@ const endDate = new Date(2026, 8, 20, 12, 0, 0);
             const userRef = firebase.database().ref('users/' + userId);
             const snapshot = await userRef.once('value');
             const banBool = snapshot.val().banned;
-            // shreyamohanty.p6@gmail.com
-            if (user.email == "atulya0521@gmail") {
+            if (user.email == "shreyamohanty.p6@gmail.com") {
                 document.getElementById('content').style.display = "block";
                 document.getElementById('nostart').style.display = "none";
                 document.getElementById('khatam').style.display = "none";
